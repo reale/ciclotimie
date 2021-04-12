@@ -6,16 +6,7 @@ This repository contains the source code of my poetry book *Ciclotimie*.
 
 ## Where to find the book
 
-* TODO
-
-## How to contribute
-
-Please feel free to fork this repository if there are any edits you should love to suggest!
-
-## Branches
-
-* the [master](https://github.com/reale/ciclotimie) branch is the default branch
-* the [gh-pages](https://github.com/reale/ciclotimie/tree/gh-pages) branch contains the landing page, which is based on the Jekyll theme [compass](https://github.com/excentris/compass) by [Eduardo Rubio](https://github.com/excentris)
+* read the book online on [GitBook](https://ciclotimie.reale.me/)
 
 ## License notice
 
