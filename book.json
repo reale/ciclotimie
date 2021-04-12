@@ -1,0 +1,19 @@
+{
+    "author": "Roberto Reale",
+    "title": "Ciclotimie",
+    "description": "Ciclotimie",
+    "gitbook": ">= 3.x.x",
+    "plugins": [],
+    "root": "./markdown",
+    "structure": {
+        "readme": "README.md",
+        "summary": "README.md"
+    },
+    "links": {
+        "sidebar": {
+            "Source Code": "https://github.com/reale/ciclotimie",
+            "Read on GitBook": "https://ciclotimie.reale.me/"
+        }
+    },
+    "pluginsConfig": {}
+}
