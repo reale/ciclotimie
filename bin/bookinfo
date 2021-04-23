@@ -178,9 +178,9 @@ function getBookParam()
 
 function getTexParam()
 {
-    #perl -0ne '"print "[$1]\n" if /\\Boolean{RAWHTML}\s*{(.*)}/g' eBook.tex
+    #perl -0ne '"print "[$1]\n" if /\\Boolean\{RAWHTML\}\s*{(.*)}/g' eBook.tex
     local pname=$1
-    local cmd='perl -0ne '"'"'print "$1\n" if /\\Boolean{'"$pname"'}\s*{(.*)}/g'
+    local cmd='perl -0ne '"'"'print "$1\n" if /\\Boolean\{'"$pname"'\}\s*{(.*)}/g'
     local cmd+="' < $bookName.tex"
     #echo "-----------[$cmd]" 
     evalrv "$cmd"

@@ -181,7 +181,7 @@ function evalrv()
 function getBookParam()
 {
     local pname=$1
-    local cmd='perl -0ne '"'"'print "$2\n" if /[^%]\s*\\(def|pgfmathsetmacro)\\'"$pname"'{(.*)}/'
+    local cmd='perl -0ne '"'"'print "$2\n" if /[^%]\s*\\(def|pgfmathsetmacro)\\'"$pname"'\{(.*)\}/'
     local cmd+="' < ../$parametersName.tex"
     evalrv "$cmd"
 }

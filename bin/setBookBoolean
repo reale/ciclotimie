@@ -151,9 +151,9 @@ function evalrv()
 
 function getTexParam()
 {
-    #perl -0ne '"print "[$1]\n" if /\\Boolean{RAWHTML}\s*{(.*)}/' eBook.tex
+    #perl -0ne '"print "[$1]\n" if /\\Boolean\{RAWHTML\}\s*{(.*)}/' eBook.tex
     local pname=$1
-    local cmd='perl -0ne '"'"'print "$1\n" if /\\Boolean{'"$pname"'}\s*{(.*)}/'
+    local cmd='perl -0ne '"'"'print "$1\n" if /\\Boolean\{'"$pname"'\}\s*{(.*)}/'
     cmd+="' < $bookName.tex"
     evalrv "$cmd"
 }
@@ -161,15 +161,15 @@ function getTexParam()
 # Set a /Boolean parameter from the book.tex
 function setTexParam()
 {
-    #perl -0ne '$b="RAWHTML";$v="XYZZY";s/(.*\\Boolean{$b}\s*{)(.*)(}.*)/\1$v\3/ ; print $_' eBook.tex > eBook.2
+    #perl -0ne '$b="RAWHTML";$v="XYZZY";s/(.*\\Boolean\{$b\}\s*{)(.*)(}.*)/\1$v\3/ ; print $_' eBook.tex > eBook.2
     local pname=$1
     local newValue=$2
 
     #perl -0ne '$b="RAWHTML";$v="XYZZY";
     local cmd='perl -0ne '"'"'$b="'"$pname"'";$v="'"$newValue"'";'
 
-    #s/(.*\\Boolean{$b}\s*{)(.*)(}.*)/\1$v\3/
-    cmd+='s/(.*\\Boolean{$b}\s*{)(.*)(}.*)/\1$v\3/'
+    #s/(.*\\Boolean\{$b\}\s*{)(.*)(}.*)/\1$v\3/
+    cmd+='s/(.*\\Boolean\{$b\}\s*{)(.*)(}.*)/\1$v\3/'
 
     # ; print $_' eBook.tex > eBook.2
     cmd+="; print $_' $bookName.tex > $bookName.tmp"
