@@ -1,12 +1,14 @@
 # Ciclotimie
 
+![Uptime Robot](https://img.shields.io/uptimerobot/status/m788022342-8b6e1942468d1bb5653592a1)
+
 ## Introduction
 
 This repository contains the source code of my poetry book *Ciclotimie*.
 
 ## Where to find the book
 
-* read the book online on [GitBook](https://ciclotimie.reale.me/)
+* read the book online on [GitBook](https://ciclotimie.reale.info/)
 
 ## License notice
 
