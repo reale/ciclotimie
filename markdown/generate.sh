@@ -10,7 +10,8 @@ cat > README.md <<EOF
 * Ciclotimie
 EOF
 
-for chapter in estati geologia giovaneuomo gravame inverni kresywschodnie nostoi ombra pan primavere
+for chapter in preface ombra primavere geologia a-gravame nostos kresy-wschodnie
+
 do
     rm -fr $chapter && mkdir $chapter
 
