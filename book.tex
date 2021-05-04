@@ -218,16 +218,13 @@
 
 %\input{tex/introduction}
 \ifthenelse{\boolean{NOBODY}}{}{
-  \input{tex/estati}%
-  \input{tex/geologia}%
-  \input{tex/giovaneuomo}%
-  \input{tex/gravame}%
-  \input{tex/inverni}%
-  \input{tex/kresywschodnie}%
-  \input{tex/nostoi}%
-  \input{tex/ombra}%
-  \input{tex/pan}%
-  \input{tex/primavere}%
+  \include{tex/preface}%
+  \include{tex/ombra}%
+  \include{tex/primavere}%
+  \include{tex/geologia}%
+  \include{tex/a-gravame}%
+  \include{tex/nostos}%
+  \include{tex/kresy-wschodnie}%
 }              
 \ChapterSuffix%
 
