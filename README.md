@@ -10,7 +10,7 @@ This repository contains the source code of my poetry book *Ciclotimie*.
 
 * read the book online on [GitBook](https://ciclotimie.reale.info/)
 * buy the book on [Amazon](https://www.amazon.com/dp/B0948JY9VT)
-* review the book on Goodreads (COMING SOON)
+* review the book on [Goodreads](https://www.goodreads.com/book/show/57988897-ciclotimie)
 
 ## License notice
 
