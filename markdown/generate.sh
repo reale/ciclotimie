@@ -8,9 +8,17 @@ cat > README.md <<EOF
 # Ciclotimie
 
 * Ciclotimie
+    * [preface](preface.md)
 EOF
 
-for chapter in preface ombra primavere geologia a-gravame nostos kresy-wschodnie
+# preface
+
+sed 's/\\[^{\]\+\({[^}]\+}\)*//' ../tex/preface.tex > preface.md
+
+
+#chapters
+
+for chapter in ombra primavere geologia a-gravame nostos kresy-wschodnie
 
 do
     rm -fr $chapter && mkdir $chapter
@@ -18,7 +26,8 @@ do
     (
         cd $chapter
 
-        $CSPLIT -o 1 -sz -n 2 -f '' -b '%02d.md' ../../tex/$chapter.tex '/\\poemtitle{.*}/' '{*}'
+        sed -n '/^\\poemtitle{/,$p' ../../tex/$chapter.tex \
+            | $CSPLIT -o 1 -sz -n 2 -f '' -b '%02d.md' - '/\\poemtitle{.*}/' '{*}'
 
         for f in ??.md
         do
